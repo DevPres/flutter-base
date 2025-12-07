@@ -37,3 +37,7 @@ inside the bash launch
 the build will be in the folder
 
 > /build/web
+
+## Mentions
+
+Thanks to https://github.com/iarunsaragadam/flutter-docker for the idea
