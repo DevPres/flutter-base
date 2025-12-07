@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+## Let docker file work
 
-This project is a starting point for a Flutter application.
+Build the docker image inside this folder
 
-A few resources to get you started if this is your first Flutter project:
+> docker build --tag "flutter.android" .
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+flutter.android can be whatever you want.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Then run the image mounting the current folder (If you want build this project make sure that you are in this folder or change ./ whit the path to the folder project)
+
+> docker run -it --rm -v ./:/app flutter.android:latest bash
+
+inside the bash launch
+
+> flutter clean && flutter pub get && flutter build apk --release
