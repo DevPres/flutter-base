@@ -6,14 +6,34 @@ A new Flutter project.
 
 Build the docker image inside this folder
 
-> docker build --tag "flutter.android" .
+> docker build -f Dockerfile.android --tag "flutter.android" .
 
-flutter.android can be whatever you want.
+for the android image
 
-Then run the image mounting the current folder (If you want build this project make sure that you are in this folder or change ./ whit the path to the folder project)
+> docker build -f Dockerfile.web --tag "flutter.web" .
+
+flutter.\* can be whatever you want. Don´t forget the dot!!
+
+## Build for android
+
+Run the image mounting the current folder (If you want build this project make sure that you are in this folder or change ./ whit the path to the folder project)
 
 > docker run -it --rm -v ./:/app flutter.android:latest bash
 
 inside the bash launch
 
 > flutter clean && flutter pub get && flutter build apk --release
+
+## Build for web
+
+Run the image mounting the current folder (If you want build this project make sure that you are in this folder or change ./ whit the path to the folder project)
+
+> docker run -it --rm -v ./:/app flutter.android:latest bash
+
+inside the bash launch
+
+> flutter clean && flutter pub get && flutter build web --release
+
+the build will be in the folder
+
+> /build/web
