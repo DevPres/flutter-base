@@ -30,7 +30,7 @@ inside the bash launch
 for a fast startup, after build the image you can use the script inside the project
 
 > ./run_web_container.sh
-> ./buildweb.sh
+> ./build_web.sh
 
 Or you can do manual
 
