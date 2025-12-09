@@ -21,7 +21,13 @@ RUN apt-get update && apt-get install -y \
     libglu1-mesa \
     wget \
     chromium-browser \
+    cmake \
+    ninja-build \
+    pkg-config \
+    clang \
+    ibgtk-3-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Install Flutter
 RUN git clone https://github.com/flutter/flutter.git /flutter

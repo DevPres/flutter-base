@@ -21,6 +21,11 @@ RUN apt-get update && apt-get install -y \
     libglu1-mesa \
     wget \
     chromium-browser \
+    cmake \
+    ninja-build \
+    pkg-config \
+    clang \
+    ibgtk-3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Flutter
@@ -42,5 +47,3 @@ WORKDIR /app
 # Expose port 5000 for the Flutter web server
 EXPOSE 5000
 
-# Command to run the Flutter web app
-CMD ["bash", "-c", "flutter clean && flutter pub get && flutter build web --release"]
